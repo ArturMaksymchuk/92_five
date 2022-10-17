@@ -6,40 +6,65 @@ pipeline {
     }
 
     stages {
-        stage('1-Build') {
+        stage('Build') {
             steps {
                 
                 echo "Start of Stage Build..."
-                git credentialsId: 'sl1', url: 'https://github.com/ArturMaksymchuk/92_five.git'
                 sh "ls -la"
                 sh "pwd"
-                sh "composer install"
                 echo "Building......."
                 echo "End of Stage Build..."
             }
         }
-        stage('2-Test') {
+        stage('Test1') {
+            steps {
+                echo "Start of Stage Test..."
+                sh "pwdascascac"
+                echo "Testing......."
+                echo "End of Stage Build..."
+            }
+        }
+        stage('Test2') {
             steps {
                 echo "Start of Stage Test..."
                 echo "Testing......."
-                echo "Privet ${PROJECT_NAME}"
-                echo "Owner is ${OWNER_NAME}"
+
                 echo "End of Stage Build..."
             }
         }
-        stage('3-Deploy') {
+        stage('Test3') {
             steps {
-                echo "Start of Stage Deploy..."
-                echo "Deploying......."
-                sh "ip a"
-                sh '''
-                   echo "Line1"
-                   echo "Line2"
-                '''
+                echo "Start of Stage Test..."
+                echo "Testing......."
+
+                echo "End of Stage Build..."
+            }
+        }            
+         stage('Test4') {
+            steps {
+                echo "Start of Stage Test..."
+                echo "Testing......."
+
+                echo "End of Stage Build..."
+            }
+        }      
+        stage('Test5') {
+            steps {
+                echo "Start of Stage Test..."
+                echo "Testing......."
+     
                 echo "End of Stage Build..."
             }
         }
-        stage('4-Celebrate') {
+        stage('Test6') {
+            steps {
+                echo "Start of Stage Test..."
+                echo "Testing......."
+
+                echo "End of Stage Build..."
+            }
+        }
+        stage('All OK') {
             steps {
                 echo "CONGRATULYACIYA!"
             }
